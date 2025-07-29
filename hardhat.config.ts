@@ -6,6 +6,7 @@ import '@nomiclabs/hardhat-ethers'
 import '@layerzerolabs/toolbox-hardhat'
 import { HardhatUserConfig, HttpNetworkAccountsUserConfig } from 'hardhat/types'
 import '@nomicfoundation/hardhat-verify'
+import 'solidity-coverage'
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
 //
