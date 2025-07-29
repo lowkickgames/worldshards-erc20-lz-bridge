@@ -7,11 +7,7 @@ import { WorldShardsOFT } from "../WorldShardsOFT.sol";
 contract WorldShardsOFTMock is WorldShardsOFT {
     constructor(address _lzEndpoint) WorldShardsOFT(_lzEndpoint) {}
 
-    function initialize(
-        string memory _name,
-        string memory _symbol,
-        address _delegate
-    ) public override initializer {
+    function initialize(string memory _name, string memory _symbol, address _delegate) public override initializer {
         __OFT_init(_name, _symbol, _delegate);
         __Ownable_init(_delegate);
     }
