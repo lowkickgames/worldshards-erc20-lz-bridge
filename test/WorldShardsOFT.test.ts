@@ -9,6 +9,7 @@ describe('WorldShardsOFT Test', function () {
     const eidA = 1
     const eidB = 2
     let WorldShardsOFTMock: ContractFactory
+    let WorldShardsOFT: ContractFactory
     let EndpointV2Mock: ContractFactory
     let ProxyAdminMock: ContractFactory
     let TransparentUpgradeableProxyMock: ContractFactory
@@ -22,6 +23,7 @@ describe('WorldShardsOFT Test', function () {
 
     before(async function () {
         WorldShardsOFTMock = await ethers.getContractFactory('WorldShardsOFTMock')
+        WorldShardsOFT = await ethers.getContractFactory('WorldShardsOFT')
         ProxyAdminMock = await ethers.getContractFactory('ProxyAdminMock')
         TransparentUpgradeableProxyMock = await ethers.getContractFactory('TransparentUpgradeableProxyMock')
 
@@ -37,7 +39,7 @@ describe('WorldShardsOFT Test', function () {
         mockEndpointV2B = await EndpointV2Mock.deploy(eidB)
 
         const implementationA = await WorldShardsOFTMock.deploy(mockEndpointV2A.address)
-        const implementationB = await WorldShardsOFTMock.deploy(mockEndpointV2B.address)
+        const implementationB = await WorldShardsOFT.deploy(mockEndpointV2B.address)
 
         const proxyAdminA = await ProxyAdminMock.deploy(ownerA.address)
         const proxyAdminB = await ProxyAdminMock.deploy(ownerB.address)
