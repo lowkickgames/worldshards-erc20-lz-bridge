@@ -4,7 +4,7 @@ Cross-chain ERC20 token bridge using LayerZero protocol
 
 - Language: Solidity v0.8.28
 - Project framework: Hardhat + TypeScript
-- Nodejs: >=18.16.0
+- Nodejs: >=20.19.4
 
 ## Installation & Usage
 
