@@ -27,7 +27,7 @@ const deploy: DeployFunction = async (hre) => {
             execute: {
                 init: {
                     methodName: 'initialize',
-                    args: ['TestOFT', 'TOFT', deployer],
+                    args: ['WorldShards', 'SHARDS', deployer],
                 },
             },
             proxyContract: 'OpenZeppelinTransparentProxy',
