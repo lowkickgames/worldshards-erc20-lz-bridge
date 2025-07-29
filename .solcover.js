@@ -1,6 +1,5 @@
 module.exports = {
     skipFiles: [
-        'mocks',
         'interface',
         'token'
     ],
