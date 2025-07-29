@@ -26,15 +26,15 @@ const deploy: DeployFunction = async (hre) => {
         log: true,
         skipIfAlreadyDeployed: false,
         proxy: {
-            viaAdminContract: "ProxyAdmin",
+            viaAdminContract: 'ProxyAdmin',
             execute: {
-              init: {
-                methodName: 'initialize',
-                args: [deployer],
-              },
+                init: {
+                    methodName: 'initialize',
+                    args: [deployer],
+                },
             },
             proxyContract: 'OpenZeppelinTransparentProxy',
-          },
+        },
     })
 
     console.log(`Deployed contract: ${contractName}, network: ${hre.network.name}, address: ${address}`)

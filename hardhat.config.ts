@@ -5,7 +5,7 @@ import 'hardhat-contract-sizer'
 import '@nomiclabs/hardhat-ethers'
 import '@layerzerolabs/toolbox-hardhat'
 import { HardhatUserConfig, HttpNetworkAccountsUserConfig } from 'hardhat/types'
-import "@nomicfoundation/hardhat-verify";
+import '@nomicfoundation/hardhat-verify'
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 
 //
@@ -18,19 +18,19 @@ import './tasks'
 // rpc urls
 //
 
-const BSC_RPC_URL = process.env.BSC_RPC_URL || "";
-const ETHEREUM_RPC_URL = process.env.ETHEREUM_RPC_URL || "";
-const BASE_RPC_URL = process.env.BASE_RPC_URL || "";
-const ARBITRUM_RPC_URL = process.env.ARBITRUM_RPC_URL || "";
+const BSC_RPC_URL = process.env.BSC_RPC_URL || ''
+const ETHEREUM_RPC_URL = process.env.ETHEREUM_RPC_URL || ''
+const BASE_RPC_URL = process.env.BASE_RPC_URL || ''
+const ARBITRUM_RPC_URL = process.env.ARBITRUM_RPC_URL || ''
 
 //
 // explorer api keys
 //
 
-const BSC_EXPLORER_API_KEY = process.env.BSC_EXPLORER_API_KEY || "";
-const ETHEREUM_EXPLORER_API_KEY = process.env.ETHEREUM_EXPLORER_API_KEY || "";
-const BASE_EXPLORER_API_KEY = process.env.BASE_EXPLORER_API_KEY || "";
-const ARBITRUM_EXPLORER_API_KEY = process.env.ARBITRUM_EXPLORER_API_KEY || "";
+const BSC_EXPLORER_API_KEY = process.env.BSC_EXPLORER_API_KEY || ''
+const ETHEREUM_EXPLORER_API_KEY = process.env.ETHEREUM_EXPLORER_API_KEY || ''
+const BASE_EXPLORER_API_KEY = process.env.BASE_EXPLORER_API_KEY || ''
+const ARBITRUM_EXPLORER_API_KEY = process.env.ARBITRUM_EXPLORER_API_KEY || ''
 
 //
 // signer private key (for deployer)
@@ -38,7 +38,7 @@ const ARBITRUM_EXPLORER_API_KEY = process.env.ARBITRUM_EXPLORER_API_KEY || "";
 
 const SIGNER_PRIVATE_KEY = process.env.SIGNER_PRIVATE_KEY
 
-const accounts: HttpNetworkAccountsUserConfig | undefined = [SIGNER_PRIVATE_KEY || ''];
+const accounts: HttpNetworkAccountsUserConfig | undefined = [SIGNER_PRIVATE_KEY || '']
 if (accounts == null) {
     console.warn(
         'Could not find SIGNER_PRIVATE_KEY environment variables. It will not be possible to execute transactions in your example.'
@@ -110,7 +110,7 @@ const config: HardhatUserConfig = {
     },
     sourcify: {
         enabled: false,
-    }
+    },
 }
 
 export default config

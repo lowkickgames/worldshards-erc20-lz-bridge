@@ -1,6 +1,6 @@
 {
   "exclude": ["node_modules"],
-  "include": ["deploy", "tasks", "test", "hardhat.config.ts", "deploy/TestOFTAdapter.ts", "deploy/TestOFT.ts", "deploy/TestOFTAdapter1/.ts"],
+  "include": ["deploy", "tasks", "test", "hardhat.config.ts", "deploy/WorldShardsOFTAdapter.ts", "deploy/WorldShardsOFT.ts"],
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",

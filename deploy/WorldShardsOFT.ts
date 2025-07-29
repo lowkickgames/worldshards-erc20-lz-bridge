@@ -19,25 +19,19 @@ const deploy: DeployFunction = async (hre) => {
 
     const { address } = await deploy(contractName, {
         from: deployer,
-        args: [
-            endpointV2Deployment.address,
-        ],
+        args: [endpointV2Deployment.address],
         log: true,
         skipIfAlreadyDeployed: false,
         proxy: {
-            viaAdminContract: "ProxyAdmin",
+            viaAdminContract: 'ProxyAdmin',
             execute: {
-              init: {
-                methodName: 'initialize',
-                args: [
-                    'TestOFT',
-                    'TOFT',
-                    deployer,
-                ],
-              },
+                init: {
+                    methodName: 'initialize',
+                    args: ['TestOFT', 'TOFT', deployer],
+                },
             },
             proxyContract: 'OpenZeppelinTransparentProxy',
-          },
+        },
     })
 
     console.log(`Deployed contract: ${contractName}, network: ${hre.network.name}, address: ${address}`)

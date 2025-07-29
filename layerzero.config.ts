@@ -1,3 +1,5 @@
+// prettier-ignore-file
+
 import { EndpointId } from '@layerzerolabs/lz-definitions'
 import { ExecutorOptionType } from '@layerzerolabs/lz-v2-utilities'
 import { TwoWayConfig, generateConnectionsConfig } from '@layerzerolabs/metadata-tools'
@@ -42,13 +44,7 @@ const EVM_ENFORCED_OPTIONS: OAppEnforcedOption[] = [
 //
 
 const pathways: TwoWayConfig[] = [
-    [
-        bscContract,
-        baseContract,
-        [['LayerZero Labs'], []],
-        [5, 5],
-        [EVM_ENFORCED_OPTIONS, EVM_ENFORCED_OPTIONS],
-    ],
+    [bscContract, baseContract, [['LayerZero Labs'], []], [5, 5], [EVM_ENFORCED_OPTIONS, EVM_ENFORCED_OPTIONS]],
 ]
 
 export default async function () {

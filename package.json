@@ -5,10 +5,10 @@
   "scripts": {
     "compile": "hardhat compile",
     "clean": "rm -rf artifacts cache out",
-    "lint": "$npm_execpath run lint:js && $npm_execpath run lint:sol",
-    "lint:fix": "eslint --fix '**/*.{js,ts,json}' && prettier --write . && solhint 'contracts/**/*.sol' --fix --noPrompt",
     "lint:js": "eslint '**/*.{js,ts,json}' && prettier --check .",
-    "lint:sol": "solhint 'contracts/**/*.sol'",
+    "lint:sol": "solhint 'contracts/**.sol'",
+    "prettier:sol": "prettier --write 'contracts/**/*.sol'",
+    "prettier:ts": "prettier --write '**.ts'",
     "test": "hardhat test"
   },
   "resolutions": {
@@ -57,13 +57,14 @@
     "hardhat-deploy": "^0.12.1",
     "mocha": "^10.2.0",
     "prettier": "^3.2.5",
+    "prettier-plugin-solidity": "^2.1.0",
     "solhint": "^4.1.1",
     "solidity-bytes-utils": "^0.8.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
   },
   "engines": {
-    "node": ">=18.16.0"
+    "node": ">=v20.19.4"
   },
   "pnpm": {
     "overrides": {
