@@ -13,7 +13,4 @@ contract WorldShardsOFTAdapter is OFTAdapterUpgradeable {
         __Ownable_init(_delegate);
     }
 
-    function test() public view returns (string memory) {
-        return "test";
-    }
 }
