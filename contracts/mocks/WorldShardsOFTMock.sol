@@ -3,7 +3,6 @@ pragma solidity 0.8.28;
 
 import { WorldShardsOFT } from "../WorldShardsOFT.sol";
 
-// @dev WARNING: This is for testing purposes only
 contract WorldShardsOFTMock is WorldShardsOFT {
     constructor(address _lzEndpoint) WorldShardsOFT(_lzEndpoint) {}
 
