@@ -19,6 +19,8 @@ contract WorldShardsOFTAdapter is OFTAdapterUpgradeable {
     }
 
     function initialize(address _delegate) public virtual initializer {
+        require(msg.sender != _delegate, "WorldShardsOFT: Delegate cannot be the same as the sender");
+
         __OFTAdapter_init(_delegate);
         __Ownable_init(_delegate);
     }

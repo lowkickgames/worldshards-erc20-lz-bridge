@@ -10,6 +10,8 @@ contract WorldShardsOFT is OFTUpgradeable {
     }
 
     function initialize(string memory _name, string memory _symbol, address _delegate) public virtual initializer {
+        require(msg.sender != _delegate, "WorldShardsOFT: Delegate cannot be the same as the sender");
+
         __OFT_init(_name, _symbol, _delegate);
         __Ownable_init(_delegate);
     }
