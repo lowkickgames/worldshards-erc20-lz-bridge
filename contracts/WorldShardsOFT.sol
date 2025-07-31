@@ -5,6 +5,7 @@ import { OFTUpgradeable } from "@layerzerolabs/oft-evm-upgradeable/contracts/oft
 
 contract WorldShardsOFT is OFTUpgradeable {
     constructor(address _lzEndpoint) OFTUpgradeable(_lzEndpoint) {
+        require(_lzEndpoint != address(0), "WorldShardsOFT: Zero lz endpoint");
         _disableInitializers();
     }
 
