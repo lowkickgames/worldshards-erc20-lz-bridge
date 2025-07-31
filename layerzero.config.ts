@@ -16,13 +16,13 @@ const bscContract: OmniPointHardhat = {
     contractName: 'WorldShardsOFTAdapter',
 }
 
-const baseContract: OmniPointHardhat = {
-    eid: EndpointId.BASE_V2_MAINNET,
+const ethContract: OmniPointHardhat = {
+    eid: EndpointId.ETHEREUM_V2_MAINNET,
     contractName: 'WorldShardsOFT',
 }
 
-// const ethContract: OmniPointHardhat = {
-//     eid: EndpointId.ETHEREUM_V2_MAINNET,
+// const baseContract: OmniPointHardhat = {
+//     eid: EndpointId.BASE_V2_MAINNET,
 //     contractName: 'WorldShardsOFT',
 // }
 
@@ -44,13 +44,13 @@ const EVM_ENFORCED_OPTIONS: OAppEnforcedOption[] = [
 //
 
 const pathways: TwoWayConfig[] = [
-    [bscContract, baseContract, [['LayerZero Labs'], []], [5, 5], [EVM_ENFORCED_OPTIONS, EVM_ENFORCED_OPTIONS]],
+    [bscContract, ethContract, [['LayerZero Labs'], []], [5, 5], [EVM_ENFORCED_OPTIONS, EVM_ENFORCED_OPTIONS]],
 ]
 
 export default async function () {
     const connections = await generateConnectionsConfig(pathways)
     return {
-        contracts: [{ contract: bscContract }, { contract: baseContract }],
+        contracts: [{ contract: bscContract }, { contract: ethContract }],
         connections,
     }
 }
