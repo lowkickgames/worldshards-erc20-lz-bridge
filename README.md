@@ -2,6 +2,8 @@
 
 This project contains the bridge contract for the $SHARDS token of [WorldShards Game](https://www.worldshards.online/).
 
+The bridge can be accessed at [bridge.worldshards.online](https://bridge.worldshards.online)
+
 The bridge enables seamless transfer of [$SHARDS tokens](https://github.com/lowkickgames/worldshards-erc20-token) between different blockchain networks.
 
 For more information about the $SHARDS token, please visit the [official wiki page](https://wiki.worldshards.online/usdshards-token).
